@@ -10,7 +10,7 @@ function Hilitor(id, tag ,nameIframe)
 	  targetNode = document.getElementById(nameIframe).contentDocument.getElementById(id);
   }
   var hiliteTag = tag || "EM";
-  var skipTags = new RegExp("^(?:" + hiliteTag + "|SCRIPT|FORM|SPAN)$");
+ // var skipTags = new RegExp("^(?:" + hiliteTag + "|SCRIPT|FORM|SPAN)$");
   var colors = ["#ff6", "#a0ffff", "#9f9", "#f99", "#f6f"];
   var wordColor = [];
   var colorIdx = 0;
@@ -22,7 +22,7 @@ function Hilitor(id, tag ,nameIframe)
   {
     switch(type)
     {
-      case "left":
+      case "left":a
         this.openLeft = false;
         this.openRight = true;
         break;
@@ -65,7 +65,7 @@ function Hilitor(id, tag ,nameIframe)
   {
     if(node === undefined || !node) return;
     if(!matchRegex) return;
-    if(skipTags.test(node.nodeName)) return;
+   // if(skipTags.test(node.nodeName)) return;
 
     if(node.hasChildNodes()) {
       for(var i=0; i < node.childNodes.length; i++)
