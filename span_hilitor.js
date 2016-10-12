@@ -1,16 +1,12 @@
 // Original JavaScript code by Chirp Internet: www.chirp.com.au
 // Please acknowledge use of this code by including this header.
 
-function Hilitor(id, tag ,nameIframe)
+function Hilitor(id, tag)
 {
 
   var targetNode = document.getElementById(id) || document.body;
-  
-  if(nameIframe){
-	  targetNode = document.getElementById(nameIframe).contentDocument.getElementById(id);
-  }
   var hiliteTag = tag || "EM";
-  var skipTags = new RegExp("^(?:" + hiliteTag + "|SCRIPT|FORM|SPAN)$");
+  var skipTags = new RegExp("^(?:" + hiliteTag + "|SCRIPT|FORM)$");
   var colors = ["#ff6", "#a0ffff", "#9f9", "#f99", "#f6f"];
   var wordColor = [];
   var colorIdx = 0;
@@ -22,7 +18,7 @@ function Hilitor(id, tag ,nameIframe)
   {
     switch(type)
     {
-      case "left":a
+      case "left":
         this.openLeft = false;
         this.openRight = true;
         break;
